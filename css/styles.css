@@ -1,0 +1,34 @@
+#title {
+  text-align: center;
+  color: yellow;
+}
+
+#tabCon, #tabCon2, #tabCon3 {
+  display: none;
+}
+
+#avengers {
+  display: hide;
+}
+
+#dp2 {
+  display: hide;
+}
+
+#mi5 {
+  display: hide;
+}
+
+
+body {
+    /* The image used */
+    background-image: url("http://www.myfreephotoshop.com/wp-content/uploads/2015/02/331.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
