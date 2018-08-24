@@ -1,34 +1,19 @@
-#title {
-  text-align: center;
-  color: yellow;
+#footer p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
 }
-
-#tabCon, #tabCon2, #tabCon3 {
-  display: none;
+#footer p a {
+  color: rgba(255, 255, 255, 0.5);
 }
-
-#avengers {
-  display: hide;
-}
-
-#dp2 {
-  display: hide;
-}
-
-#mi5 {
-  display: hide;
+#footer p a:hover, #footer p a:active, #footer p a:focus {
+  color: rgba(255, 255, 255, 0.9) !important;
+  vertical-align: text-bottom;
 }
 
 
 body {
-    /* The image used */
-    background-image: url("http://www.myfreephotoshop.com/wp-content/uploads/2015/02/331.jpg");
-
-    /* Full height */
+    background-image:url("https://media.giphy.com/media/10kxE34bJPaUO4/giphy.gif");
     height: 100%;
-
-    /* Center and scale the image nicely */
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
