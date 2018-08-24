@@ -10,153 +10,154 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <h1>FAT-Pizza</h1>
+    <div class="container">
+    <div class="jumbotron"><h1>The-FAT-Pizza</h1></div>
+   </div>
 <hr>
 <br>
-<br>
-<br>
+
  <!-- start -->
  <!-- Dough Type -->
- <h3><strong>Pick Your Dough</strong></h3>
+ <h3><strong>Pick Your Layout</strong></h3>
   <div class="container">
-    <div class="col-md-3">
-      <div class="panel panel-warning">
-      <div class="panel heading">Type</div>
-      <div class="radio">
-        <label><input type="radio" name="pizza" value="orig">
-          <p>Original</p>
-          <p>Thin Crust</p>
-          <p>Pan Pizza</p>
-      </div></label>
-    </div>
-  </div>
+    <div class="col-md-4">
+      <div class="panel panel-primary">
+      <div class="panel heading"><strong>Types</strong></div>
+      <form action="submit" method="post">
+        <input type="radio" name="dough" value="orig" /> Original <br>
+        <input type="radio" name="dough" value="thin" /> Thin Crust
+        <hr>
+      <div class="panel heading"><strong>Sauces</strong></div>
+        <input type="radio" name="sauce" value="marinara" /> Marinara <br>
+        <input type="radio" name="sauce" value="bbq" /> Barbecue
+      </form>
+      </div>
+     </div>
+   </div>
+
 <!-- spacing; cols will overlap each other if not -->
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 <br>
 <hr>
 <!-- .. -->
 
     <!-- Selection -->
-  <form id="toppings">
+  <form id="toppings" action="submit" method="post">
     <h3><em>Pick Your Toppings</em></h3>
     <!-- section 1 -->
     <div class="col-md-6">
-      <div class="panel panel-info">
+      <div class="panel panel-danger">
         <div class="panel heading">Meats</div>
       <!--topping 1-->
-      <div class="radio">
-        <label><input type="radio" name="pizza" value="one">
-          <p class="fontco">Pepperoni</p><br>
-            <img src="img/pep.jpeg" id="pep"></label>
-           </div>
-           <hr>
+        <input type="checkbox" name="meats" value="one">
+          <p class="fontco">Pepperoni</p></input><br>
+          <img src="img/pep.jpeg" id="pep">
+          <hr>
          <!-- topping 2-->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="two">
-              <p class="fontco">Sausage</p></label>
-          </div>
+        <input type="checkbox" name="meats" value="two">
+          <p class="fontco">Beef</p></input><br>
+          <img src="img/beef.jpeg" id="beef">
           <hr>
           <!-- topping 3 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="three">
-              <p class="fontco">Ham</p></label>
-          </div>
+        <input type="checkbox" name="meats" value="three">
+          <p class="fontco">Ham</p></input><br>
+          <img src="img/ham.png" id="ham">
           <hr>
           <!-- topping 4 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="four">
-              <p class="fontco"></p></label>
-          </div>
+        <input type="checkbox" name="meats" value="four">
+          <p class="fontco">Sausage</p></input><br>
+          <img src="img/sausage.jpg" id="sausage">
           <hr>
           <!-- topping 5 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="five">
-              <p class="fontco"></p></label>
-          </div>
+        <input type="checkbox" name="meats" value="five">
+          <p class="fontco">Chicken</p></input><br>
+          <img src="img/chicken.jpg" id="chicken">
         </div>
       </div>
 
         <!-- section 2  -->
+
           <!-- Veggies -->
-        <div class="col-md-6">
-          <div class="panel panel-info">
-            <div class="panel heading">Veggies</div>
-          <!-- topping 6 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="six">
-              <p class="fontco"></p></label>
-          </div>
-          <hr>
-          <!-- topping 7 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="seven">
-              <p class="fontco"></p></label>
-          </div>
-          <hr>
-          <!-- topping 8 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="eight">
-              <p class="fontco"></p></label>
-          </div>
-          <hr>
-          <!-- topping 9 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="nine">
-              <p class="fontco"></p></label>
-          </div>
-          <hr>
-          <!-- topping 10 -->
-          <div class="radio">
-            <label><input type="radio" name="pizza" value="ten">
-              <p class="fontco"></p></label>
-          </div>
-        </div>
-      </div>
+          <div class="col-md-6">
+            <div class="panel panel-success">
+              <div class="panel heading">Veggies</div>
+            <!--topping 1 -->
+              <input type="checkbox" name="veggies" value="six">
+                <p class="fontco">Onions</p></input><br>
+                <img src="img/onions.jpg" id="onions">
+                <hr>
+               <!-- topping 2 -->
+              <input type="checkbox" name="veggies" value="seven">
+                <p class="fontco">Red Pepper</p></input><br>
+                <img src="img/rpepper.jpg" id="rpepper">
+                <hr>
+                <!-- topping 3 -->
+              <input type="checkbox" name="veggies" value="eight">
+                <p class="fontco">Olives</p></input><br>
+                <img src="img/olives.jpeg" id="olives">
+                <hr>
+                <!-- topping 4 -->
+              <input type="checkbox" name="veggies" value="nine">
+                <p class="fontco">Spinach</p></input><br>
+                <img src="img/spinach.jpg" id="spinach">
+                <hr>
+                <!-- topping 5 -->
+              <input type="checkbox" name="veggies" value="ten">
+                <p class="fontco">Mushrooms</p></input><br>
+                <img src="img/mush.jpeg" id="mush">
+              </div>
+            </div>
+
       <br>
       <!-- submit button -->
       <div class="container">
       <button type="submit" class="btn btn-info">Add Toppings</button>
     </div>
     </form>
+
+
+    <!-- spacing  -->
 <br>
 <br>
 <hr>
+
 <!-- order submit -->
   <div class="container">
     <div id="summary">
-     <h2>Pls Fill Up Below</h2>
-     <div id="infos">
+     <h2>Your Info</h2>
+     <div id="checkout">
        <form>
          <div class="form-group">
-           <label for="person"><span class="letters">Name</label></span>
+           <label for="person">Name</label>
            <input id="person" class="form-control" type="text">
          </div>
          <div class="form-group">
-           <label for="address"><span class="letters">Address</label></span>
+           <label for="address">Address</label>
            <input id="address" class="form-control" type="text">
          </div>
          <div class="form-group">
-           <label for="email"><span class="letters">Email</label></span>
+           <label for="email">Email</label>
            <input id="email" class="form-control" type="text">
          </div>
          <div class="form-group">
-           <label for="phone"><span class="letters">Phone #</label></span>
+           <label for="phone">Phone #</label>
            <input id="phone" class="form-control" type="text">
          </div>
        <button class="btn btn-success" type="submit" value="text" id="submit">Submit</button>
        </form>
+
+       <!-- results  -->
+       <div class="order-detail">
+        <span id="order-summary">Your Order</span>
+       </div>
+       <div class="order-total">
+        <span id="order-cost">Your Total</span>
+       </div>
+       
      </div>
    </div>
  </div>
 <hr>
 
-       <!-- <h1><span id="firstname"></span></h1> -->
 
 
     <!-- ending footer -->
