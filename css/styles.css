@@ -10,10 +10,19 @@
   vertical-align: text-bottom;
 }
 
+#submit
+{
+  vertical-align: left;
+}
 
 body {
     /* background-image:url("https://media.giphy.com/media/10kxE34bJPaUO4/giphy.gif"); */
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#pep {
+  height: 100px;
+  width: 250px;
 }

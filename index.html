@@ -10,21 +10,50 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <h1>Fatizza Pizzeria</h1>
+    <h1>FAT-Pizza</h1>
 <hr>
 <br>
+<br>
+<br>
  <!-- start -->
+ <!-- Dough Type -->
+ <h3><strong>Pick Your Dough</strong></h3>
+  <div class="container">
+    <div class="col-md-3">
+      <div class="panel panel-warning">
+      <div class="panel heading">Type</div>
+      <div class="radio">
+        <label><input type="radio" name="pizza" value="orig">
+          <p>Original</p>
+          <p>Thin Crust</p>
+          <p>Pan Pizza</p>
+      </div></label>
+    </div>
+  </div>
+<!-- spacing; cols will overlap each other if not -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<!-- .. -->
+
     <!-- Selection -->
   <form id="toppings">
-    <h3>Pick Your Toppings</h3>
-
+    <h3><em>Pick Your Toppings</em></h3>
+    <!-- section 1 -->
     <div class="col-md-6">
       <div class="panel panel-info">
         <div class="panel heading">Meats</div>
       <!--topping 1-->
       <div class="radio">
         <label><input type="radio" name="pizza" value="one">
-          <p class="fontco">Pepperoni</p></label>
+          <p class="fontco">Pepperoni</p><br>
+            <img src="img/pep.jpeg" id="pep"></label>
            </div>
            <hr>
          <!-- topping 2-->
@@ -53,6 +82,7 @@
         </div>
       </div>
 
+        <!-- section 2  -->
           <!-- Veggies -->
         <div class="col-md-6">
           <div class="panel panel-info">
@@ -88,10 +118,12 @@
           </div>
         </div>
       </div>
-
-          <!-- submit button -->
-          <button type="submit" class="btn btn-info">Result</button>
-      </form>
+      <br>
+      <!-- submit button -->
+      <div class="container">
+      <button type="submit" class="btn btn-info">Add Toppings</button>
+    </div>
+    </form>
 <br>
 <br>
 <hr>
@@ -117,7 +149,7 @@
            <label for="phone"><span class="letters">Phone #</label></span>
            <input id="phone" class="form-control" type="text">
          </div>
-       <button class="btn btn-success" type="submit" value="text">Submit</button>
+       <button class="btn btn-success" type="submit" value="text" id="submit">Submit</button>
        </form>
      </div>
    </div>
