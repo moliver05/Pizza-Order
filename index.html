@@ -5,7 +5,7 @@
     <title>Object-Oriented Project</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
   </head>
@@ -13,24 +13,27 @@
     <div class="container">
     <div class="jumbotron"><h1>The-FAT-Pizza</h1></div>
    </div>
+   <p id="intro"><em>Locally owned since 1995! Built by legendary Chef Fezzi. Savor <thead>
+     hot and ready one of a kind pizza. All ingredients are organic and sauces are
+     always fresh even the cheese!<em></p>
+   </thead>
 <hr>
 <br>
 
  <!-- start -->
  <!-- Dough Type -->
+ <form id="OrderNow">
  <h3><strong>Pick Your Layout</strong></h3>
   <div class="container">
     <div class="col-md-4">
       <div class="panel panel-primary">
       <div class="panel heading"><strong>Types</strong></div>
-      <form action="submit" method="post">
         <input type="radio" name="dough" value="orig" /> Original <br>
         <input type="radio" name="dough" value="thin" /> Thin Crust
         <hr>
       <div class="panel heading"><strong>Sauces</strong></div>
         <input type="radio" name="sauce" value="marinara" /> Marinara <br>
         <input type="radio" name="sauce" value="bbq" /> Barbecue
-      </form>
       </div>
      </div>
    </div>
@@ -41,35 +44,29 @@
 <!-- .. -->
 
     <!-- Selection -->
-  <form id="toppings" action="submit" method="post">
     <h3><em>Pick Your Toppings</em></h3>
     <!-- section 1 -->
     <div class="col-md-6">
       <div class="panel panel-danger">
         <div class="panel heading">Meats</div>
       <!--topping 1-->
-        <input type="checkbox" name="meats" value="one">
-          <p class="fontco">Pepperoni</p></input><br>
+        <input type="checkbox" name="meats" value="one">Pepperoni</input><br>
           <img src="img/pep.jpeg" id="pep">
           <hr>
          <!-- topping 2-->
-        <input type="checkbox" name="meats" value="two">
-          <p class="fontco">Beef</p></input><br>
+        <input type="checkbox" name="meats" value="two">Beef</input><br>
           <img src="img/beef.jpeg" id="beef">
           <hr>
           <!-- topping 3 -->
-        <input type="checkbox" name="meats" value="three">
-          <p class="fontco">Ham</p></input><br>
+        <input type="checkbox" name="meats" value="three">Ham</input><br>
           <img src="img/ham.png" id="ham">
           <hr>
           <!-- topping 4 -->
-        <input type="checkbox" name="meats" value="four">
-          <p class="fontco">Sausage</p></input><br>
+        <input type="checkbox" name="meats" value="four">Sausage</input><br>
           <img src="img/sausage.jpg" id="sausage">
           <hr>
           <!-- topping 5 -->
-        <input type="checkbox" name="meats" value="five">
-          <p class="fontco">Chicken</p></input><br>
+        <input type="checkbox" name="meats" value="five">Chicken</input><br>
           <img src="img/chicken.jpg" id="chicken">
         </div>
       </div>
@@ -81,39 +78,29 @@
             <div class="panel panel-success">
               <div class="panel heading">Veggies</div>
             <!--topping 1 -->
-              <input type="checkbox" name="veggies" value="six">
-                <p class="fontco">Onions</p></input><br>
+              <input type="checkbox" name="veggies" value="six">Onions</input><br>
                 <img src="img/onions.jpg" id="onions">
                 <hr>
                <!-- topping 2 -->
-              <input type="checkbox" name="veggies" value="seven">
-                <p class="fontco">Red Pepper</p></input><br>
+              <input type="checkbox" name="veggies" value="seven">Red Pepper</input><br>
                 <img src="img/rpepper.jpg" id="rpepper">
                 <hr>
                 <!-- topping 3 -->
-              <input type="checkbox" name="veggies" value="eight">
-                <p class="fontco">Olives</p></input><br>
+              <input type="checkbox" name="veggies" value="eight">Olives</input><br>
                 <img src="img/olives.jpeg" id="olives">
                 <hr>
                 <!-- topping 4 -->
-              <input type="checkbox" name="veggies" value="nine">
-                <p class="fontco">Spinach</p></input><br>
+              <input type="checkbox" name="veggies" value="nine">Spinach</input><br>
                 <img src="img/spinach.jpg" id="spinach">
                 <hr>
                 <!-- topping 5 -->
-              <input type="checkbox" name="veggies" value="ten">
-                <p class="fontco">Mushrooms</p></input><br>
+              <input type="checkbox" name="veggies" value="ten">Mushrooms</input><br>
                 <img src="img/mush.jpeg" id="mush">
               </div>
             </div>
-
       <br>
       <!-- submit button -->
-      <div class="container">
       <button type="submit" class="btn btn-info">Add Toppings</button>
-    </div>
-    </form>
-
 
     <!-- spacing  -->
 <br>
@@ -122,10 +109,8 @@
 
 <!-- order submit -->
   <div class="container">
-    <div id="summary">
      <h2>Your Info</h2>
      <div id="checkout">
-       <form>
          <div class="form-group">
            <label for="person">Name</label>
            <input id="person" class="form-control" type="text">
@@ -144,21 +129,19 @@
          </div>
        <button class="btn btn-success" type="submit" value="text" id="submit">Submit</button>
        </form>
-
-       <!-- results  -->
-       <div class="order-detail">
-        <span id="order-summary">Your Order</span>
-       </div>
-       <div class="order-total">
-        <span id="order-cost">Your Total</span>
-       </div>
-       
      </div>
-   </div>
- </div>
+
+       <!-- Order Summary  -->
+       <div class="customer-info">
+        <span id="summary">Your Order:</span>
+       </div>
+       <hr>
+       <div class="order-total">
+        <span id="Total">Your Total:</span>
+       </div>
+
+  </div>
 <hr>
-
-
 
     <!-- ending footer -->
     		<footer>

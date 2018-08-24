@@ -29,6 +29,11 @@ img: hover {
   opacity: 0.5;
 }
 
+#intro {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
 #pep {
   height: 100px;
   width: 250px;
