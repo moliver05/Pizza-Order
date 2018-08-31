@@ -1,10 +1,12 @@
 // business logic
 
-function OrderTaker (size, sauce, meats, veggies) {
+function OrderTaker (size, sauce, meats, veggies, Name, Email) {
   this.size = size;
   this.sauce = sauce;
   this.meats = meats;
   this.veggies = veggies;
+  this.name = name;
+  this.email = email;
   this.cost = 0;
 }
 
@@ -20,18 +22,9 @@ OrderTaker.prototype.calculateCost = function() {
 $(document).ready(function(){
   alert("We only do PICK UP service!");
 
- $("button#addTopps").submit(function(){
-   alert("Added!");
-
-});
   // summary info
 $("#OrderNow").submit(function(event){
    event.preventDefault();
-   var Name = $("input#person").val();
-   var Address = $("input#address").val();
-   var Email = $("input#email").val();
-   var Phone = $("input#phone").val();
-
 // layout + toppings
   var size = []; $("input:radio[name=size]:checked").each(function() {
     size.push($(this).val());
@@ -49,14 +42,18 @@ $("#OrderNow").submit(function(event){
      veggies.push($(this).val());
    });
 
+   var Name = $("input#person").val();
+   var Address = $("input#address").val();
+   var Email = $("input#email").val();
+   var Phone = $("input#phone").val();
+
+   alert("Success!");
   // send all the infos into a new array
     var NewOrder = new OrderTaker (size, sauce, meats, veggies, Name, Email)
        NewOrder.calculateCost();
 
-
    // total
-       $('#summary').append();
-       $('#Total').text("Total"  + " " + "$" + NewOrder.cost);
+       $('#totalprice').text("Total"  + " " + "$" + NewOrder.cost);
 
      });
    });
