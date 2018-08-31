@@ -1,18 +1,18 @@
 // business logic
 
-function OrderTaker (dough, sauce, meats, veggies) {
-  this.dough = original || thin;
-  this.sauce = marinara || barbecue;
+function OrderTaker (size, sauce, meats, veggies) {
+  this.size = size;
+  this.sauce = sauce;
   this.meats = meats;
   this.veggies = veggies;
-  this.total = 0;
+  this.cost = 0;
 }
 
-OrderTaker.prototype.calculateTotal = function() {
-  if(this.dough === "original" && this.sauce === "marinara") {
-    this.total = 15 + this.meats.length * 4 + this.vegetables.length * 3;
+OrderTaker.prototype.calculateCost = function() {
+  if(this.size === 'large') {
+    this.cost = 15 + this.meats.length * 4 + this.veggies.length * 3;
   } else {
-    this.total = 10 + this.meats.length * 2 + this.vegetables.length * 3;
+    this.cost = 10 + this.meats.length * 2 + this.veggies.length * 3;
   };
 };
 
@@ -33,8 +33,8 @@ $("#OrderNow").submit(function(event){
    var Phone = $("input#phone").val();
 
 // layout + toppings
-  var dough = []; $("input:radio[name=dough]:checked").each(function() {
-    dough.push($(this).val());
+  var size = []; $("input:radio[name=size]:checked").each(function() {
+    size.push($(this).val());
   });
 
   var sauce = []; $("input:radio[name=sauce]:checked").each(function() {
@@ -50,14 +50,13 @@ $("#OrderNow").submit(function(event){
    });
 
   // send all the infos into a new array
-    var NewOrder = new OrderTaker (person, phone, sauce, dough, address, meats, veggies);
-       NewOrder.calculateTotal();
+    var NewOrder = new OrderTaker (size, sauce, meats, veggies, Name, Email)
+       NewOrder.calculateCost();
 
 
    // total
-       $('#summary').append('<li><span class="">' + "for" + " " + name + ":" + " " + email+ ":" + " " + address + "" + "" + " " + meats + " " + veggies +'</span></li>');
-
-       $('#Total').text("Total"  + " " + "$" + NewOrder.total);
+       $('#summary').append();
+       $('#Total').text("Total"  + " " + "$" + NewOrder.cost);
 
      });
    });
